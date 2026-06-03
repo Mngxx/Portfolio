@@ -1,40 +1,36 @@
-var navlisticon = document.querySelector("#navlisticon")
-var mql_expand = window.matchMedia('(min-width: 1353px)')
-var navitems = document.querySelectorAll(".navitems");
-var navbar = document.querySelector("nav")
-navlisticon.addEventListener('click', ShownavList)
-function ShownavList() {
+// Mobile Navigation Toggle
+const navToggleButton = document.querySelector('#navlisticon');
+const navList = document.querySelector('#navlist');
+const navItems = document.querySelectorAll('.navitems');
 
-    let navstylecheck = 0;
-    for (let item of navitems) {
-        if (item.style.display == "flex") {
-            item.style.display = "none";
-            navstylecheck = 0;
+navToggleButton.addEventListener('click', () => {
+  navList.classList.toggle('hidden');
+});
 
-        }
-        else {
-            item.style.display = "flex";
-            navstylecheck = 1;
-        }
-    }
-    if (navstylecheck == 1) {
-        navbar.style.maxHeight = "30em";
-    }
-    else {
-        navbar.style.maxHeight = "3.5em";
-    }
-};
-mql_expand.onchange = (e) => {
-    if (e.matches) {
-        navbar.style.maxHeight = "3.5em";
-        for (let item of navitems) {
-            item.style.display = "flex";
-        }
+// Close mobile menu when a link is clicked
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    navList.classList.add('hidden');
+  });
+});
 
+// Close mobile menu on window resize if above tablet breakpoint
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768) {
+    navList.classList.add('hidden');
+  }
+});
+
+// Smooth scroll for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href !== '#' && document.querySelector(href)) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-    else {
-        for (let item of navitems) {
-            item.style.display = "none";
-        }
-    }
-}
+  });
+});
