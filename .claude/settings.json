@@ -1,0 +1,21 @@
+{
+  "projectName": "Ron Lara's Portfolio",
+  "description": "Modern responsive portfolio website showcasing 4+ years of software engineering experience",
+  "defaultLanguages": ["html", "javascript", "json"],
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/",
+    ".git/",
+    ".DS_Store",
+    "*.log"
+  ],
+  "gitSettings": {
+    "autoCommit": false,
+    "requireCommitMessages": true
+  },
+  "buildSettings": {
+    "buildCommand": "npm run build",
+    "devCommand": "npm run dev",
+    "outputDir": "dist"
+  }
+}
