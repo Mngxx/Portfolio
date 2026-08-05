@@ -32,7 +32,7 @@ export const CURRENT_PROJECTS: CurrentProject[] = [
 			"AWS CDK",
 			"Groq AI",
 		],
-		demoVideoUrl: "",
+		demoVideoUrl: "https://www.youtube.com/embed/6_vb7teKHP0",
 		liveUrl: "https://english-pal-one.vercel.app/login",
 		repoUrl: "https://github.com/Mngxx/EnglishPal",
 	},
