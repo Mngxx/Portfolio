@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 font-semibold text-white shadow-lg shadow-cyan-500/25 transition-all hover:from-cyan-400 hover:to-blue-500;
+  }
+
+  .btn-secondary {
+    @apply rounded-lg border-2 border-cyan-500 font-semibold text-cyan-400 transition-all hover:bg-cyan-500/10;
+  }
+
+  /* Section headings */
+  .section-title {
+    @apply mb-4 text-center text-4xl font-bold sm:text-5xl;
+  }
+
+  .section-subtitle {
+    @apply mb-12 text-center text-lg text-gray-400;
+  }
+
+  /* Expertise cards */
+  .expertise-card {
+    @apply rounded-lg border bg-gradient-to-br from-slate-800 to-slate-900 p-8 shadow-xl;
+  }
+
+  .expertise-icon {
+    @apply mb-6 flex h-16 w-16 items-center justify-center rounded-lg transition-colors;
+  }
+
+  /* About Me social cards */
+  .social-card {
+    @apply rounded-lg border border-slate-600 bg-slate-700 p-6 shadow-xl transition-all hover:bg-slate-600;
+  }
+
+  /* Contact section */
+  .contact-item {
+    @apply flex items-start space-x-4;
+  }
+
+  .contact-icon-wrap {
+    @apply mt-1 flex-shrink-0;
+  }
+
+  .quick-link {
+    @apply flex items-center space-x-3 text-gray-300 transition-colors;
+  }
+
+  /* Shared */
+  .icon-scale {
+    @apply transition-transform group-hover:scale-110;
+  }
+
+  .blob {
+    @apply absolute rounded-full opacity-20 mix-blend-multiply blur-3xl filter;
+    animation: blob 7s infinite;
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+}
