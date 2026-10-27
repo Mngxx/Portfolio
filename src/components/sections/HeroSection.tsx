@@ -24,14 +24,17 @@ export function HeroSection() {
 					</span>{" "}
 					with <br />
 					<span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-						4+ Years
+						3+ Years
 					</span>{" "}
 					of Experience
 				</h1>
-				<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-					Building scalable web applications and delivering high-impact
-					solutions. Specialized in full-stack development, system design, and
-					modern technologies.
+				<p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
+					Building scalable web applications and serverless data pipelines.
+					Specialized in full-stack development, data engineering on AWS, and
+					system design.
+				</p>
+				<p className="mb-8 inline-block rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-semibold text-emerald-400">
+					AWS Certified Data Engineer – Associate
 				</p>
 				<div className="flex flex-col sm:flex-row gap-4 justify-center">
 					<a href="#projects" className="btn-primary px-6 py-3">
