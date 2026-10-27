@@ -16,7 +16,7 @@ export function AboutSection() {
 							<span className="text-cyan-400 font-semibold">
 								Software Engineer
 							</span>{" "}
-							with 4+ years of professional experience in developing scalable
+							with 3+ years of professional experience in developing scalable
 							web applications and software solutions. Throughout my career,
 							I've worked on diverse projects including{" "}
 							<span className="text-cyan-400 font-semibold">
@@ -31,6 +31,14 @@ export function AboutSection() {
 								government systems
 							</span>
 							.
+						</p>
+						<p className="text-gray-300 text-lg leading-relaxed mt-4">
+							I'm also an{" "}
+							<span className="text-emerald-400 font-semibold">
+								AWS Certified Data Engineer – Associate
+							</span>
+							, building serverless data pipelines with Lambda, S3, Glue, and
+							Athena that turn raw data into insights.
 						</p>
 						<p className="text-gray-300 text-lg leading-relaxed mt-4">
 							I'm passionate about writing clean, maintainable code and solving

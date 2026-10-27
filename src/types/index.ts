@@ -23,4 +23,5 @@ export type CurrentProject = {
 	demoVideoUrl?: string;
 	liveUrl?: string;
 	repoUrl?: string;
+	apiDocsUrl?: string;
 };

@@ -29,7 +29,7 @@ export function Layout({ children }: LayoutProps) {
 
 			<footer className="border-t border-slate-800 bg-slate-950 px-4 py-8 sm:px-6 lg:px-8">
 				<div className="mx-auto max-w-6xl text-center">
-					<p className="text-gray-400">Designed & Built with ❤️ by Ron Lara</p>
+					<p className="text-gray-400">Designed & Built by Ron Lara</p>
 					<p className="mt-2 text-sm text-gray-500">
 						© {new Date().getFullYear()}. All rights reserved.
 					</p>

@@ -1,6 +1,6 @@
 # Ron Lara — Portfolio
 
-Personal portfolio site for Ron Lara, a Software Engineer with 4+ years of experience in full-stack development, system design, and scalable web applications. Built as a React + TypeScript single-page app and deployed on Vercel.
+Personal portfolio site for Ron Lara, a Software Engineer with 3+ years of professional experience in full-stack development, system design, and scalable web applications. Built as a React + TypeScript single-page app and deployed on Vercel.
 
 ## Tech Stack
 
@@ -56,7 +56,7 @@ src/
 
 Projects are split into two categories in `src/config.ts`:
 
-- **`CURRENT_PROJECTS`** — actively maintained projects, each with a `status` of `"live"` or `"in-development"`, a tech stack, and its own detail page at `/projects/:project`. Optional fields: `images`, `demoVideoUrl`, `liveUrl`, `repoUrl`.
+- **`CURRENT_PROJECTS`** — actively maintained projects, each with a `status` of `"live"` or `"in-development"`, a tech stack, and its own detail page at `/projects/:project`. Optional fields: `images`, `demoVideoUrl`, `liveUrl`, `repoUrl`, `apiDocsUrl`.
 - **`PROJECTS`** — older school/internship-era projects, compiled into a single card on the landing page linking to `/projects/legacy` rather than shown individually.
 
 ## Deployment

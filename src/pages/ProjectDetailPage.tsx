@@ -63,6 +63,16 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
 							View Source
 						</a>
 					)}
+					{project.apiDocsUrl && (
+						<a
+							href={project.apiDocsUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="btn-secondary px-6 py-3"
+						>
+							API Docs
+						</a>
+					)}
 				</div>
 			</div>
 		</Layout>

@@ -40,24 +40,32 @@ export const CURRENT_PROJECTS: CurrentProject[] = [
         slug: "esportslens",
         name: "EsportsLens",
         tagline:
-            "Esports analytics platform turning live match data into player and meta insights via an AWS data pipeline.",
+            "Serverless AWS data pipeline (Lambda, S3, Glue/PySpark, Athena) and FastAPI backend serving a React dashboard for live Dota 2 and League of Legends match analytics; 100% test coverage, full CI/CD.",
         description:
-            "An esports analytics platform ingesting live and historical match data (Valorant, Dota 2) through a serverless AWS data pipeline — Lambda ingestion, Glue ETL, an S3 data lake, and Athena for querying — surfaced through a FastAPI backend and a React dashboard for player stats, match history, and meta analysis.",
-        status: "in-development",
+            "EsportsLens tracks professional Dota 2 matches (via OpenDota) and League of Legends Challenger-ladder matches (via Riot's API), processing raw match data through a fully serverless AWS pipeline — Lambda ingestion on a 12-hour schedule, an S3 data lake, Glue (PySpark) ETL into partitioned Parquet, and Athena for SQL querying. A FastAPI backend (Lambda + API Gateway) serves 15 REST endpoints, consumed by a React/TypeScript dashboard showing player stats, match history, and hero/champion meta trends. Full CI/CD via GitHub Actions, 100% test coverage on ingestion and API, CloudWatch monitoring, and server-side caching.",
+        status: "live",
         techStack: [
-            "Python",
-            "FastAPI",
             "AWS Lambda",
+            "AWS S3",
             "AWS Glue",
+            "PySpark",
             "AWS Athena",
             "AWS CDK",
+            "FastAPI",
+            "Python",
             "React",
             "TypeScript",
+            "Vite",
+            "Tailwind CSS",
             "Recharts",
+            "GitHub Actions",
+            "Vercel",
         ],
-        demoVideoUrl: "",
+        demoVideoUrl: "https://www.youtube.com/embed/ibtNTDCwPvE",
         liveUrl: "https://client-jade-tau-80.vercel.app/",
         repoUrl: "https://github.com/Mngxx/EsportsLens",
+        apiDocsUrl:
+            "https://tqk96f1lj7.execute-api.ap-southeast-1.amazonaws.com/docs",
     },
 ];
 
