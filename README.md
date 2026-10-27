@@ -37,6 +37,7 @@ src/
 │   ├── ProjectDetailPage.tsx / ProjectDetailRoute.tsx
 │   ├── LegacyProjectsPage.tsx
 │   └── NotFoundPage.tsx
+├── images/                   # Project screenshots and photos
 ├── config.ts                 # Site content: nav links, current & legacy project data
 ├── types/                    # Shared TypeScript types
 └── index.css                 # Tailwind v4 entry point + shared @layer components classes
@@ -47,7 +48,7 @@ src/
 | Path | Renders |
 |---|---|
 | `/` | Landing page (Hero, Expertise, About, Projects, Contact) |
-| `/projects/:slug` | Detail page for a current project |
+| `/projects/:project` | Detail page for a current project (param matches a project `slug` in `config.ts`) |
 | `/projects/legacy` | Compiled list of legacy (school/internship-era) projects |
 | `*` | 404 |
 
@@ -55,7 +56,7 @@ src/
 
 Projects are split into two categories in `src/config.ts`:
 
-- **`CURRENT_PROJECTS`** — actively maintained projects, each with a `status` of `"live"` or `"in-development"`, a tech stack, and its own detail page at `/projects/:slug`.
+- **`CURRENT_PROJECTS`** — actively maintained projects, each with a `status` of `"live"` or `"in-development"`, a tech stack, and its own detail page at `/projects/:project`. Optional fields: `images`, `demoVideoUrl`, `liveUrl`, `repoUrl`.
 - **`PROJECTS`** — older school/internship-era projects, compiled into a single card on the landing page linking to `/projects/legacy` rather than shown individually.
 
 ## Deployment
